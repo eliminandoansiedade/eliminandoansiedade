@@ -1,0 +1,736 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex" />
+    <title>(1) Mensagem de Carlos Augusto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto:wght@400;700;900&display=swap"
+        rel="stylesheet">
+
+
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=IjJ61RkEJmBqV2P_TYM7aszXqx-zkG5dOP-b7yt4viPzLl-2TYOqXOwf6xNlrrb7" charset="UTF-8"></script><script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                screens: {
+                    xs: { max: '575px' }, // Mobile (iPhone 3 - iPhone XS Max).
+                    sm: { min: '576px', max: '897px' }, // Mobile (matches max: iPhone 11 Pro Max landscape @ 896px).
+                    md: { min: '898px', max: '1199px' }, // Tablet (matches max: iPad Pro @ 1112px).
+                    lg: { min: '1200px' }, // Desktop smallest.
+                    xl: { min: '1159px' }, // Desktop wide.
+                    xxl: { min: '1359px' } // Desktop widescreen.
+                },
+            }
+        }
+    </script>
+    <style>
+        #barratopo {
+            font-size: 15px;
+            font-weight: 700;
+            color: #FFFFFF;
+            text-align: center;
+            background-color: #090909;
+            padding: 12px;
+            height: 45px;
+        }
+
+        #cidade {
+            color: #000;
+            font-weight: bold;
+        }
+
+        body {
+            font-family: "Roboto", Sans-serif;
+            padding: 0;
+            margin: 0;
+            background-color: #FFF;
+        }
+
+        #conteudo {
+            position: relative;
+        }
+
+        .headline {
+            color: #FFFFFF;
+            font-family: "Roboto", Sans-serif;
+            font-size: 27px;
+            font-weight: 400;
+            line-height: 33px;
+            text-shadow: 0px 0px 1px #ffffff;
+        }
+
+        .bg {
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: url(img/bg.jpg) center center;
+            opacity: .15;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+        }
+
+        .som {
+            color: #000;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .botao {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            text-transform: uppercase;
+            line-height: 1.2em;
+            letter-spacing: 0px;
+            text-shadow: 0px 0px 1px #ffffff;
+            background-color: #099946;
+            border-radius: 20px;
+            padding: 22px 45px 22px 45px;
+            color: #FFFFFF;
+            width: 540px;
+            margin-left: 20px;
+            margin-right: 20px;
+            text-align: center;
+            box-shadow: 6px 6px 10px 0 rgb(0 0 0 / 50%);
+        }
+        .fbnota {
+            text-align: center;
+            color: #000;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 300;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .copy {
+            text-align: center;
+            color: #000;
+            font-family: 'Poppins', sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .animado {
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scaleX(1)
+            }
+
+            50% {
+                transform: scale3d(1.05, 1.05, 1.05)
+            }
+
+            to {
+                transform: scaleX(1)
+            }
+        }
+
+        #delay {
+            display: none;
+        }
+
+        .vagas {
+            font-size: 18px;
+            color: #000;
+            text-align: center;
+            padding: 40px;
+            display: none;
+        }
+
+        .vagas span {
+            background-color: #099946;
+            padding: 10px;
+            color: #fff;
+            border-radius: 10px;
+            font-weight: 700;
+        }
+
+        #player {
+            box-shadow: -1px 0px 6px 0px #000;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .player-wrapper {
+            border-radius: 10px;
+            background-color: #F65E00;
+            border: 2px solid #FFFFFF;
+            width: 80%;
+            margin: auto;
+            padding: 0.5em;
+            text-align: center;
+            position: absolute;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            z-index: 99999;
+            top: 50%;
+            left: 50%;
+        }
+
+        .player-wrapper svg {
+            text-align: center;
+            display: inline !important;
+        }
+
+        .player-span {
+            font-family: "Roboto", Sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            display: block;
+            text-align: center;
+            color: #FFFFFF;
+            white-space: normal;
+            width: 100%;
+            line-height: 1.1em;
+            padding: 0.5em 0;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+
+        @media (max-width: 680px) {
+            #player .player-span {
+                font-size: 20px;
+            }
+
+            #player .player-wrapper svg {
+                width: 30%;
+            }
+        }
+
+        @media (max-width: 380px) {
+            #player .player-span {
+                font-size: 16px;
+                line-height: 1em;
+            }
+
+            #player .player-wrapper svg {
+                width: 25%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="barratopo">
+        <span id="viewers"></span> pessoas estão assistindo neste momento
+    </div>
+	
+    <div class="container-wrap">
+        <div class="bg"></div>
+        <div class="container mx-auto">
+            <div id="conteudo">
+                <div class="
+                    xs:ml-[20px] xs:mr-[20px]
+                    sm:ml-[20px] sm:mr-[20px] 
+                    md:ml-[200px] md:mr-[200px] 
+                    lg:ml-[300px] lg:mr-[300px] 
+                    xl:ml-[300px] xl:mr-[300px]
+                    xxl:ml-[300px] xxl:mr-[300px]">
+                    <div class="headline text-center pt-10 pb-2">
+<center>
+	<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjP2tdNE0G7c483odvF2-SeYWU3m3w74j8NPjX00hvQ6K_zAjrbTmhL80aMqKKVQIyw5W5xQ2jtOiOphHFhNnl1zIYRedNVXpnSqXh7o5Ih1F4NgkHUS_7VVvZc1nx9B31rCysoU46U7YlER8nkClwJTSE54L8sk-HqY8ZMUtKiaJ_HjskPE5Ti0KeX/w693-h390/Essa_era_a_minha_pior_experi%C3%AAncia_com_Ansiedade_Social._Depois_que_voc%C3%AA_aprender_a_reprogramar_a_verdadeira_causa_da_Ansiedade_Social__voc%C3%AA_n%C3%A3o_ir%C3%A1_mais_ficar_Desconfort%C3%A1vel_quando_as_pessoas_est%C3%A3o_ol.png"
+	width="600px">
+	</center>
+                    </div>
+					
+
+                    <div class="flex flex-col justify-center pt-2">
+                        <div class="som flex justify-center pt-3 pb-2 xs:text-xs gap-2">
+                            <img role="img" alt="🔊" style="width: 1em !important;"
+                                src="https://w7.pngwing.com/pngs/363/907/png-transparent-computer-icons-volume-others-text-logo-share-icon-thumbnail.png"> Por
+                            favor, verifique se o seu som está ligado!
+                        </div>
+                        <div>
+                            <div id="player">
+                                <script src="https://fast.wistia.com/embed/medias/6u1zbxpkm1.jsonp" async></script>
+                                <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+                                <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
+                                    <div class="wistia_responsive_wrapper"
+                                        style="height:100%;left:0;position:absolute;top:0;width:100%;">
+                                        <div class="wistia_embed wistia_async_6u1zbxpkm1 videoFoam=true"
+                                            style="height:100%;position:relative;width:100%">
+                                            <div class="wistia_swatch"
+                                                style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
+                                                <img src="https://fast.wistia.com/embed/medias/6u1zbxpkm1/swatch"
+                                                    style="filter:blur(5px);height:100%;object-fit:contain;width:100%;"
+                                                    alt="" aria-hidden="true"
+                                                    onload="this.parentNode.style.opacity=1;" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="player-wrapper">
+                                    <span class="player-span">Seu vídeo já começou</span>
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="46.75px"
+                                        height="32.563px" viewBox="7.999 9.062 46.75 32.563"
+                                        enable-background="new 7.999 9.062 46.75 32.563" xml:space="preserve">
+                                        <style>
+                                            @-webkit-keyframes BLINK {
+                                                0% {
+                                                    opacity: 0;
+                                                }
+
+                                                33% {
+                                                    opacity: 1;
+                                                }
+
+                                                66% {
+                                                    opacity: 1;
+                                                }
+
+                                                100% {
+                                                    opacity: 0;
+                                                }
+                                            }
+
+                                            @keyframes BLINK {
+                                                0% {
+                                                    opacity: 0;
+                                                }
+
+                                                33% {
+                                                    opacity: 1;
+                                                }
+
+                                                66% {
+                                                    opacity: 1;
+                                                }
+
+                                                100% {
+                                                    opacity: 0;
+                                                }
+                                            }
+
+                                            #player#player#player .blink_1 {
+                                                -webkit-animation: BLINK 2s infinite;
+                                                animation: BLINK 2s infinite;
+                                                opacity: 0;
+                                            }
+
+                                            #player#player#player .blink_2 {
+                                                -webkit-animation: BLINK 2s infinite .3s;
+                                                animation: BLINK 2s infinite .3s;
+                                                opacity: 0;
+                                            }
+
+                                            #player#player#player .blink_3 {
+                                                -webkit-animation: BLINK 2s infinite .6s;
+                                                animation: BLINK 2s infinite .6s;
+                                                opacity: 0;
+                                            }
+
+                                            #player#player#player .smartplay-svg-color {
+                                                fill: #FFFFFF !important;
+                                            }
+
+                                            #player#player#player .adjustable {
+                                                border: 4px solid red;
+                                            }
+                                        </style>
+                                        <g class="adjustable fg">
+                                            <path class="smartplay-svg-color"
+                                                d="M53.249,39.616c-0.186,0-0.371-0.051-0.537-0.157l-43.5-27.75c-0.466-0.297-0.603-0.916-0.306-1.381c0.298-0.466,0.917-0.601,1.381-0.306l43.5,27.75c0.467,0.297,0.604,0.916,0.307,1.381C53.901,39.453,53.579,39.616,53.249,39.616z">
+                                            </path>
+                                            <path class="blink_3 smartplay-svg-color"
+                                                d="M48.896,33.467l1.699,1.085c3.497-7.791,2.073-17.271-4.313-23.659c-0.391-0.391-1.023-0.391-1.414,0s-0.391,1.023,0,1.414C50.581,18.019,51.913,26.463,48.896,33.467z">
+                                            </path>
+                                            <path class="blink_3 smartplay-svg-color"
+                                                d="M46.926,36.956c-0.612,0.863-1.286,1.695-2.059,2.469c-0.392,0.391-0.392,1.023,0,1.414c0.194,0.195,0.45,0.293,0.707,0.293c0.256,0,0.512-0.098,0.706-0.293c0.878-0.878,1.642-1.824,2.333-2.807L46.926,36.956z">
+                                            </path>
+                                            <path class="blink_2 smartplay-svg-color"
+                                                d="M42.543,29.415l1.777,1.135c1.545-5.315,0.229-11.293-3.953-15.476c-0.392-0.391-1.023-0.391-1.414,0c-0.392,0.391-0.392,1.023,0,1.414C42.454,19.987,43.639,24.925,42.543,29.415z">
+                                            </path>
+                                            <path class="blink_2 smartplay-svg-color"
+                                                d="M41,33.174c-0.563,0.94-1.235,1.837-2.047,2.646c-0.391,0.392-0.391,1.023,0,1.414c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293c0.916-0.914,1.676-1.924,2.317-2.984L41,33.174z">
+                                            </path>
+                                            <path class="blink_1 smartplay-svg-color"
+                                                d="M35.771,25.094l2.003,1.277c0.012-0.203,0.029-0.404,0.029-0.609c0-3.079-1.2-5.974-3.381-8.153c-0.391-0.391-1.022-0.391-1.414,0c-0.391,0.391-0.391,1.023,0,1.414C34.652,20.666,35.613,22.802,35.771,25.094z">
+                                            </path>
+                                            <path class="blink_1 smartplay-svg-color"
+                                                d="M35.084,29.401c-0.474,1.145-1.172,2.197-2.076,3.1c-0.391,0.391-0.391,1.023,0,1.414c0.195,0.195,0.451,0.293,0.707,0.293c0.257,0,0.513-0.098,0.707-0.293c1.008-1.006,1.795-2.17,2.361-3.43L35.084,29.401z">
+                                            </path>
+                                            <polygon class="smartplay-svg-color"
+                                                points="28.124,20.215 28.124,14.991 24.635,17.99  "></polygon>
+                                            <path class="smartplay-svg-color"
+                                                d="M20.921,20.366h-6.423c-0.553,0-1,0.508-1,1.135v8.229c0,0.627,0.447,1.135,1,1.135h7.375l6.25,5.875V24.96L20.921,20.366z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                    <span class="player-span">Clique para ouvir</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="progressbar" style="width: 0%; background-color: #B81717; height: 10px;"></div>
+                </div>
+            </div>
+            <div id="delay">
+                <div class="container mx-auto pl-3 pb-0 pr-3 pt-3">
+                    <div class="flex justify-center ">
+                        <div class="botao animado">
+                            <button class="rounded-full ">
+                                <span class="uppercase">
+                                    sim, quero entrar agora para o <br /><b>SISTEMA Eliminando Ansiedade Social!</b>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="vagas">
+                        <span id="qtvagas">37</span> vagas disponíveis!
+                    </div>
+                </div>
+
+                </div>
+            </div>
+          
+          <div class="fbnota text-center 
+                            xs:ml-[15px] xs:mr-[15px]
+                            sm:ml-[15px] sm:mr-[15px] 
+                            md:ml-[200px] md:mr-[200px] 
+                            lg:ml-[300px] lg:mr-[300px] 
+                            xl:ml-[300px] xl:mr-[300px]
+                            xxl:ml-[400px] xxl:mr-[400px]">
+                <p><strong>Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook.</strong>
+                    Depois que
+                    você
+                    sair do
+                    Facebook, a responsabilidade não é deles e sim do nosso site. Fazemos todos os esforços
+                    para indicar
+                    claramente e mostrar todas as provas do produto e usamos resultados reais. </p>
+            </div>
+            <div class="flex justify-center ">
+            </div>
+            <div class="flex flex-col items-center copy">
+                <span>
+                    Copyright 2022®
+                </span>
+                <span>
+                    Todos os direitos reservados.
+                </span>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+
+    </script>
+    <script>
+        var duration = 0;
+        var videoTrigger = false;
+        window._wq = window._wq || [];
+        _wq.push({
+            id: '6u1zbxpkm1', onReady: function (video) {
+                duration = video.duration();
+                video.play();
+
+                video.bind('play', function () {
+                    if (document.querySelectorAll(".player-wrapper")[0].style.display == 'none') {
+                        video.time(0);
+                        return video.unbind;
+                    }
+                });
+
+                video.bind("secondchange", function () {
+                    if (video.time() >= 662 && videoTrigger !== true) {
+                        videoTrigger = true;
+
+                        document.querySelectorAll("#delay")[0].style.display = 'block';
+                        document.querySelectorAll("#delay")[0].style.cursor = 'pointer';
+                        document.querySelectorAll("#delay")[0].addEventListener('click', function (event) {
+                            window.location.href = ("https://www.google.com");
+                        });
+                        document.querySelectorAll(".vagas")[0].style.display = "block";
+                        changeVagas();
+                    }
+
+                    var ratio = video.time() / duration;
+                    document.querySelectorAll("#progressbar")[0].style.width = calcWidth(ratio) + "%";
+                });
+            }
+        });
+
+        function calcWidth(t) {
+            return 80 * Math.sqrt(1 - (t -= 1) * t)
+        }
+
+        function set(currentTime, duration) {
+            var ratio = currentTime / duration;
+            this.player.template.fakeBar.style.width = this.calcWidth(ratio) + "%";
+        }
+
+        document.querySelectorAll("#player")[0].addEventListener('click', function (event) {
+            if (document.querySelectorAll(".player-wrapper")[0].style.display != 'none') {
+                document.querySelectorAll(".player-wrapper")[0].style.display = 'none';
+                var video = Wistia.api("6u1zbxpkm1");
+                video.replaceWith("6u1zbxpkm1",
+                    { transition: "none" }
+                );
+                video.play();
+                video.unmute();
+            }
+        });
+
+        function changeVagas() {
+            var vagas = parseInt(document.querySelectorAll("#qtvagas")[0].innerHTML);
+            if (vagas > 7) {
+                document.querySelectorAll("#qtvagas")[0].innerHTML = --vagas;
+                setTimeout(changeVagas, 10000);
+            }
+        }
+
+        function random(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+        var initial = random(18, 133);
+        var count = initial;
+
+        setInterval(function () {
+            var variation = random(-5, 5);
+
+            count += variation;
+
+            if (count < 0) {
+                count = 13;
+            }
+            document.querySelectorAll("#viewers")[0].innerHTML = count;
+
+        }, 2800);
+        document.querySelectorAll("#viewers")[0].innerHTML = initial;        
+    </script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '501000728376977');
+        fbq('track', 'PageView'); 
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=501000728376977&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 13px;
+  width: 80%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 14px;
+  transition: 0.4s
+  margin-top: 10px;
+}
+
+body{
+  font-family: "Poppins", sans-serif;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  width: 80%;
+  text-align: left;
+  font-size: 12px;
+  margin-top: 10px;
+}
+</style>
+</head>
+<body>
+<center>
+<button class="accordion"><strong>Disclosure</strong></button>
+<div class="panel">
+  <p>As informações contidas neste boletim são publicadas exclusivamente para fins informativos e não podem ser consideradas como aconselhamento médico pessoal.
+<br>
+<br>O leitor deve, para qualquer questão relativa à sua saúde e bem-estar, consultar um profissional devidamente credenciado pelas autoridades de saúde. O editor deste conteúdo não é médico ou pratica a medicina a qualquer título, ou qualquer outra profissão terapêutica. Apenas expressa sua opinião baseado em dados e fatos apresentados por agentes da saúde, ou conteúdo informativo disponível ao público, considerados confiáveis na data de publicação. Posto que as opiniões nascem de julgamentos e estimativas, estão sujeitas a mudança.
+<br>
+<br>Os relatórios são de uso exclusivo de seus destinatários. São estritamente proibidos, sem autorização por escrito do detentor dos direitos autorais, sob as penalidades previstas em lei, a comunicação ou a distribuição dos materiais incluídos nestes boletins, bem como a reprodução total ou parcial, por qualquer meio ou processo, incluindo fotocópias e distribuição via computador.</p>
+</div>
+
+<button class="accordion"><strong>Políticas de Privacidade</strong></button>
+<div class="panel">
+  <p>Somos rigorosos em relação aos nossos termos de privacidade e entendemos que você também o seja. Portanto, mantemos seus dados em absoluto sigilo.
+<br>Por favor, reserve alguns minutos para ler os nossos procedimentos de privacidade de forma a se assegurar que estamos fornecendo o melhor conteúdo possível.
+<br>
+<br><strong>INFORMAÇÃO GERAL
+</strong><br>Esta política define nossas práticas de privacidade e explica como manuseamos as informações que coletamos quando você acessa o nosso conteúdo.
+<br>
+<br><strong>O QUE PODEMOS COLETAR
+</strong><br>Coletamos informações sobre quais páginas você acessa, as informações sobre o dispositivo móvel pelo qual você acessa o nosso site (tipo de dispositivo ou tipo de navegador), e informações que você nos envia (como por exemplo, o endereço de e-mail usado para receber as nossas newsletters).
+<br>
+<br>Quando você acessa o nosso site, (i) podemos coletar e armazenar seu endereço IP; (ii) podemos usar essas informações para combater o spam e outros abusos; e/ou, (iii) para gerar informações agregadas e não-identificadoras sobre como as pessoas acessam o nosso portal.
+<br>
+<br>As informações coletadas também poderão ser utilizadas para direcionamento de campanhas publicitárias de uma forma geral, além de formar dados estatísticos para fins comerciais, ou informativos, e que poderão ser compartilhados com parceiros, patrocinadores, anunciantes ou outras empresas externas. Nesses casos, nós não revelaremos seu nome ou dados de navegação.
+<br>
+<br>Nós poderemos utilizar, formatar e divulgar depoimentos referentes aos nossos produtos e/ou conteúdos postados por você em perfis e páginas públicas nas redes sociais, ocultando fotos, imagens e sobrenomes que possam te identificar, em websites, aplicativos ou materiais institucionais e publicitários para a divulgação dos nossos produtos e serviços.
+<br>
+<br><strong>COOKIES
+</strong><br>Por vezes utilizamos cookies para armazenar e monitorar informações e preferências de nossos usuários. Os cookies nos permitem personalizar em termos visuais suas visitas ao nosso ambiente on-line, tão logo você seja identificado, tornando a sua experiência em nosso site otimizada.
+<br>
+<br>Nós e nossas afiliadas, terceiros e outros parceiros utilizamos cookies e outras tecnologias de identificação em nosso site, aplicativo móvel, comunicações por e-mail, anúncios e outros serviços on-line.
+<br>
+<br>Além disso, podemos monitorar os seus acessos e entender o que você busca, quanto tempo fica em cada página, dentre outras coisas importantes para sempre o atendermos da melhor forma possível.
+<br>
+<br>A despeito da maioria dos navegadores de internet estarem inicialmente configurados para aceitar cookies, caso você prefira, poderá negar o armazenamento em seu disco rígido, utilizando alguma forma alternativa. Contudo, todos os usuários devem entender que áreas do ambiente ansiedadesocial.site e seus subdomínios estão sujeitas a um funcionamento não otimizado neste caso.
+<br>
+<br>No entanto, os cookies são imprescindíveis para que você possa acessar os produtos e/ou conteúdos adquiridos, que estarão disponíveis na área exclusiva do cliente, de modo que, ao negar o seu armazenamento em disco rígido, o seu acesso a nossa área logada será suspenso.
+<br>
+<br><strong>SINCRONIZAÇÃO E RELEVÂNCIA DE ANÚNCIOS
+</strong><br>Para que nossos anúncios tenham a maior relevância possível, trabalhamos com prestadores de serviços/afiliados que nos auxiliam a veicular anúncios semelhantes em diversos aparelhos e plataformas. Por exemplo, trabalhamos com serviços de anúncios de mídias sociais para veicular a você anúncios relevantes de acordo com as suas atividades nesses canais de mídia. Nós também poderemos contratar prestadores de serviços para veicular anúncios em aplicativos ou sites móveis semelhantes aos que são veiculados em sites tradicionais.
+<br><br><strong>ENVIO DE E-MAILS
+</strong><br>Ao efetuar seu cadastro, seus dados serão armazenados em um banco de dados interno. Assim, como toda e qualquer informação pessoal será acessada apenas pelos nossos colaboradores, que possuem compromisso de confidencialidade com a gente.
+<br>
+<br>Nós poderemos enviar e-mails com newsletters ou com conteúdo publicitário.
+<br>
+<br>Às vezes, enviaremos e-mails administrativos sobre alterações de conta, serviço ou novas políticas.
+<br>
+<br>Não lhe enviaremos um e-mail para solicitar sua senha ou outras informações de conta. Se você receber um e-mail com conteúdo suspeito, envie para nós para que possamos investigar.
+<br>
+<br>Todo o conteúdo de e-mail por você enviado a nós é confidencial. Não adicionaremos o seu endereço de e-mail às nossas listas de distribuição sem sua prévia permissão. Por razões de segurança, caso sua requisição seja sobre apenas uma de nossas newsletters, nós poderemos requisitar outras informações além das previamente fornecidas de forma a averiguar sua identidade. É importante ressaltar que neste caso nós confirmaremos apenas informações que você já tenha previamente nos informado.
+<br>
+<br>Caso opte por não receber nossas newsletters gratuitas, o cancelamento pode ser solicitado através do e-mail eliminandoansiedadesocial@gmail.com.
+<br>
+<br><strong>MENSAGENS DE E-MAIL NÃO SOLICITADAS
+<br></strong>Nós exigimos que todas as mensagens de e-mail nos promovendo ou promovendo nossos produtos sejam enviadas apenas a pessoas que já tenham aceitado receber tal conteúdo. É expressamente proibido qualquer tipo de promoção da nossa marca ou de nosso website através de mensagens de e-mail indesejadas. O não cumprimento desta política resultará no cancelamento de parceria e/ou rescisão de conta afiliada.
+<br>
+<br>Caso você entenda que já tenha recebido alguma mensagem não solicitada, por favor, envie-nos seu relato por e-mail através do eliminandoansiedadesocial@gmail.com. Nós analisaremos o conteúdo de imediato. Se não desejar mais receber nenhuma de nossas newsletters, basta clicar no link na parte inferior de todos os nossos e-mails enviados.
+<br>
+<br><strong>SMS, WHATSAPP, TELEGRAM E CONTATO TELEFÔNICO
+<br></strong>Esporadicamente, nós poderemos enviar mensagens de texto aos usuários cadastrados. As mensagens poderão conter ofertas, avisos ou informações relevantes.
+<br>
+<br>Nós nos utilizamos da ferramenta WhatsApp Business como canal de vendas e para comunicações informativas com os usuários.
+<br>
+<br>A ferramenta Telegram será utilizada para compartilhamento de informações sobre os produtos e/ou serviços que você eventualmente venha a adquirir e como um canal de vendas.
+<br>
+<br>Contatos telefônicos poderão ser realizados para alinhamento de informações sobre produtos e/ou conteúdos adquiridos, bem como divulgação de ofertas exclusivas.
+<br>
+<br>Caso você não queira mais receber comunicações através desses meios, envie-nos seu relato por e-mail, endereçado para eliminandoansiedadesocial@gmail.com. Nós analisaremos o conteúdo de imediato.
+<br><br><strong>SEGURANÇA DE DADOS
+<br></strong>Usamos criptografia (HTTPS / TLS) para proteger os dados transmitidos para o nosso site. No entanto, nenhuma transmissão de dados pela Internet é 100% segura, por isso não podemos garantir plena segurança. Você usa o nosso site por sua conta e risco e é responsável por tomar medidas razoáveis para proteger a sua conta (como usar uma senha segura, por exemplo).
+<br>
+<br>Todos os dados que você nos enviar pela Internet através de formulários de nosso website serão transferidos a nós via TSL– um protocolo de criptografia – e armazenados em bancos de dados que não podem ser acessados em ambiente externo ao nosso firewall.
+<br>
+<br>Em outras palavras, todo e qualquer dado que você nos enviar estará devidamente codificado de forma a não poder ser decifrado e lido por quaisquer agentes mal-intencionados. Nosso firewall é um mecanismo que previne acesso aos nossos servidores por pessoas que não componham nosso quadro de colaboradores, e está ativo ininterruptamente.
+<br>
+<br>Nós poderemos ocasionalmente utilizar seu nome e endereço de e-mail para enviar informações relativas ao nosso conteúdo que possam lhe interessar. Se, a qualquer tempo você desejar ser removido de nossa lista de distribuição de conteúdo gratuito, por favor, clique no link na parte inferior de todos os nossos e-mails ou nos contate por meio do eliminandoansiedadesocial@gmail.com.
+<br>
+<br>Você poderá solicitar a revisão e correção de seus dados sem qualquer ônus e a qualquer tempo. Para isso, basta entrar em contato por meio de um dos canais de atendimento disponíveis. Ao terminar sua relação conosco, caso deseje excluir seus dados, lembre-se que nós, com o fim de cumprir com obrigações legais, armazenaremos determinados dados pelo período e nos termos que a legislação vigente aplicável exigir.
+<br>
+<br><strong>ALTERAÇÕES A ESTA POLÍTICA
+<br></strong>Nós poderemos atualizar periodicamente esta Política. Avisaremos sobre alterações significativas.
+<br>
+<br>Recomendamos que você reveja periodicamente este documento para acompanhar as informações mais recentes sobre nossas práticas de privacidade.
+<br>
+<br><strong>PERGUNTAS
+<br></strong>Em caso de dúvidas, preocupações e comentários sobre esta Política escreva utilizando:eliminandoansiedadesocial@gmail.com.</p>
+</div>
+
+<button class="accordion"><strong>Termos de Uso</strong></button>
+<div class="panel">
+  <p>Ao acessar ao site Sistema Eliminando Ansiedade Social, concorda em cumprir estes termos de serviço, todas as leis e regulamentos aplicáveis ​​e concorda que é responsável pelo cumprimento de todas as leis locais aplicáveis. Se você não concordar com algum desses termos, está proibido de usar ou acessar este site. Os materiais contidos neste site são protegidos pelas leis de direitos autorais e marcas comerciais aplicáveis.
+<br>
+<br><strong>Uso de Licença
+<br></strong>É concedida permissão para baixar temporariamente uma cópia dos materiais (informações ou software) no site Sistema Eliminando Ansiedade Social, apenas para visualização transitória pessoal e não comercial. Esta é a concessão de uma licença, não uma transferência de título e, sob esta licença, você não pode: 
+<br>
+<br>1. modificar ou copiar os materiais; 
+<br>2. usar os materiais para qualquer finalidade comercial ou para exibição pública (comercial ou não comercial); 
+<br>3. tentar descompilar ou fazer engenharia reversa de qualquer software contido no site Sistema Eliminando Ansiedade Social; 
+<br>4. remover quaisquer direitos autorais ou outras notações de propriedade dos materiais; ou 
+<br>5. transferir os materiais para outra pessoa ou 'espelhe' os materiais em qualquer outro servidor.
+<br>6. Esta licença será automaticamente rescindida se você violar alguma dessas restrições e poderá ser rescindida por Sistema Eliminando Ansiedade Social a qualquer momento. Ao encerrar a visualização desses materiais ou após o término desta licença, você deve apagar todos os materiais baixados em sua posse, seja em formato eletrônico ou impresso.
+<br>
+<br><strong>Isenção de responsabilidade
+<br></strong>Os materiais no site da Sistema Eliminando Ansiedade Social são fornecidos 'como estão'. Sistema Eliminando Ansiedade Social não oferece garantias, expressas ou implícitas, e, por este meio, isenta e nega todas as outras garantias, incluindo, sem limitação, garantias implícitas ou condições de comercialização, adequação a um fim específico ou não violação de propriedade intelectual ou outra violação de direitos.
+<br>Além disso, o Sistema Eliminando Ansiedade Social não garante ou faz qualquer representação relativa à precisão, aos resultados prováveis ​​ou à confiabilidade do uso dos materiais em seu site ou de outra forma relacionado a esses materiais ou em sites vinculados a este site.
+<br><br><strong>Limitações
+<br></strong>Em nenhum caso o Sistema Eliminando Ansiedade Social ou seus fornecedores serão responsáveis ​​por quaisquer danos (incluindo, sem limitação, danos por perda de dados ou lucro ou devido a interrupção dos negócios) decorrentes do uso ou da incapacidade de usar os materiais em Sistema Eliminando Ansiedade Social, mesmo que Sistema Eliminando Ansiedade Social ou um representante autorizado da Sistema Eliminando Ansiedade Social tenha sido notificado oralmente ou por escrito da possibilidade de tais danos. Como algumas jurisdições não permitem limitações em garantias implícitas, ou limitações de responsabilidade por danos conseqüentes ou incidentais, essas limitações podem não se aplicar a você.
+<br>
+<br><strong>Precisão dos materiais
+<br></strong>Os materiais exibidos no site da Sistema Eliminando Ansiedade Social podem incluir erros técnicos, tipográficos ou fotográficos. Sistema Eliminando Ansiedade Social não garante que qualquer material em seu site seja preciso, completo ou atual. Sistema Eliminando Ansiedade Social pode fazer alterações nos materiais contidos em seu site a qualquer momento, sem aviso prévio. No entanto, Sistema Eliminando Ansiedade Social não se compromete a atualizar os materiais.
+<br>
+<br><strong>Links
+<br></strong>O Sistema Eliminando Ansiedade Social não analisou todos os sites vinculados ao seu site e não é responsável pelo conteúdo de nenhum site vinculado. A inclusão de qualquer link não implica endosso por Sistema Eliminando Ansiedade Social do site. O uso de qualquer site vinculado é por conta e risco do usuário.
+<br>
+<br><strong>Modificações
+</strong><br>O Sistema Eliminando Ansiedade Social pode revisar estes termos de serviço do site a qualquer momento, sem aviso prévio. Ao usar este site, você concorda em ficar vinculado à versão atual desses termos de serviço.
+<br>
+<br><strong>Lei aplicável
+</strong><br>Estes termos e condições são regidos e interpretados de acordo com as leis do Sistema Eliminando Ansiedade Social e você se submete irrevogavelmente à jurisdição exclusiva dos tribunais naquele estado ou localidade.</p>
+</div>
+</center>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+</body>
+</html>
